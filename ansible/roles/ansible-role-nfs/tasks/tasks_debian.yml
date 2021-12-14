@@ -1,0 +1,28 @@
+---
+
+- name: nfs server installed
+  register: nfs_kernel_server_installed
+  apt:
+    name: nfs-kernel-server
+    state: present
+
+- name: copy file exports "{{ nfs_file_export }}"
+  copy:
+    src: "{{ nfs_file_export }}"
+    dest: /etc/exports
+    owner: root
+    group: root
+    mode: "u=r,g=r,o="
+  notify:
+  - reload-nfs
+
+
+- name: nfs service is running as configured
+  service:
+    name: nfs-kernel-server
+    daemon_reload: yes
+    state: "{{ nfs_service_state }}"
+    enabled: "{{ nfs_service_enabled }}"
+  notify:
+  - reload-nfs
+

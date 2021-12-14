@@ -1,0 +1,18 @@
+---
+
+# - debug: var=hostvars[inventory_hostname].nfs_directory
+# - debug: msg="nfs_directory = {{ nfs_directory }}"
+
+- name: "import tasks repositories Debian 20.xxx"
+  when:
+    - ansible_facts['os_family'] == "Debian"
+    - ansible_facts['distribution_major_version'] == "20"
+  import_tasks: ubuntu_focal.yml
+
+
+- name: "import tasks repositories Debian 16.xxx"
+  when:
+    - ansible_facts['os_family'] == "Debian"
+    - ansible_facts['distribution_major_version'] == "16"
+  import_tasks: ubuntu_xenial.yml
+

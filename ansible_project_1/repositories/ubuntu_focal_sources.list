@@ -1,0 +1,12 @@
+#
+# # cat /etc/os-release
+#   VERSION_ID="20.04"
+#
+# cat /etc/apt/sources.list
+#
+# TEST
+#
+
+deb http://rep.õõõõõõ.õõ/ubuntu focal          main restricted universe
+deb http://rep.õõõõõõ.õõ/ubuntu focal-updates  main restricted universe
+deb http://rep.õõõõõõ.õõ/ubuntu focal-security main restricted universe

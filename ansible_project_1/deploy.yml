@@ -1,0 +1,10 @@
+---
+
+- hosts: nfs
+  roles:
+   - ansible-role-repositories
+   - ansible-role-nfs
+
+
+
+

@@ -1,0 +1,19 @@
+---
+
+- name: "copy file repositories_file_sources"
+  when: repositories_file_sources is defined and repositories_file_sources == ''
+  copy:
+    src: "{{ role_path }}/defaults/ubuntu_xenial_sources.list"
+    dest: /etc/apt/sources.list
+    owner: root
+    group: root
+    mode: "u=r,g=r,o="
+
+- name: "copy file repositories_file_sources"
+  when: repositories_file_sources is defined and repositories_file_sources != ''
+  copy:
+    src: "{{ repositories_file_sources }}"
+    dest: /etc/apt/sources.list
+    owner: root
+    group: root
+    mode: "u=r,g=r,o="

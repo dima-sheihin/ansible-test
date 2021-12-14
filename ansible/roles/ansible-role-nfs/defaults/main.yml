@@ -1,0 +1,14 @@
+---
+# Переменные которые объявляются для отработки функционала модуля, переменные можно переопределить в плайбуке
+
+nfs_exports: []
+
+# service
+nfs_service_state: started
+nfs_service_enabled: true
+
+# каталог с данными
+nfs_directory: "/tmp/nfs"
+
+# файл с доступами
+nfs_file_export: "{{ role_path }}/defaults/exports"

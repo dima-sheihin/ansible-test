@@ -1,0 +1,24 @@
+---
+# Обработчики, выполняются в самом конце всех тасок
+
+#- name: debian-nfs-server-restart
+#  service:
+#    name: nfs-kernel-server
+#    state: restarted
+
+- name: reload-nfs
+  command: 'exportfs -ra'
+
+#- name: nfs-kernel-server-start
+#  service:
+#    name: nfs-kernel-server
+#    daemon_reload: yes
+#    enabled: yes
+#    state: started
+
+#- name: nfs-kernel-server-restart
+#  service:
+#    daemon_reload: yes
+#    enabled: yes
+#    name: nfs-kernel-server
+#    state: restarted

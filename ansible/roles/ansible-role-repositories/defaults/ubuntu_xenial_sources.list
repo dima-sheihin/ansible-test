@@ -1,0 +1,10 @@
+#
+# # cat /etc/os-release
+#   VERSION="16.04.6 LTS (Xenial Xerus)"
+#
+# cat /etc/apt/sources.list
+#
+
+deb http://rep.õõõõõõ.õõ/ubuntu xenial main restricted universe
+deb http://rep.õõõõõõ.õõ/ubuntu xenial-updates main restricted universe
+deb http://rep.õõõõõõ.õõ/ubuntu xenial-security main restricted universe

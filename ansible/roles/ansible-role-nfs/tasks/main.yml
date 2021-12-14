@@ -1,0 +1,33 @@
+---
+# Применение:
+#  import_tasks: debian.yml
+#  import_tasks: redhat.yml
+#  import_tasks: windows.yml
+
+# - debug: var=hostvars[inventory_hostname].nfs_directory
+
+# - debug: msg="nfs_directory = {{ nfs_directory }}"
+
+- name: import tasks debian
+  import_tasks: tasks_debian.yml
+  when: ansible_facts['os_family']|lower == 'debian'
+
+- name: import tasks redhat
+  import_tasks: tasks_redhat.yml
+  when: ansible_facts['os_family']|lower == 'redhat'
+
+- name: create directory "{{ nfs_directory }}"
+  file:
+    path: "{{ nfs_directory }}"
+    state: directory
+    owner: nobody
+    group: nogroup
+    mode: "u=rwX,g=rwX,o="
+  notify:
+  - reload-nfs
+
+
+
+
+
+
