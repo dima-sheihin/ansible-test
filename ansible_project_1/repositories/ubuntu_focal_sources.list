@@ -7,6 +7,6 @@
 # TEST
 #
 
-deb http://rep.õõõõõõ.õõ/ubuntu focal          main restricted universe
-deb http://rep.õõõõõõ.õõ/ubuntu focal-updates  main restricted universe
-deb http://rep.õõõõõõ.õõ/ubuntu focal-security main restricted universe
+deb http://rep.xxxxxx/ubuntu focal          main restricted universe
+deb http://rep.xxxxxx/ubuntu focal-updates  main restricted universe
+deb http://rep.xxxxxx/ubuntu focal-security main restricted universe
