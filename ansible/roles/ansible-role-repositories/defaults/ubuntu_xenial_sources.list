@@ -5,6 +5,6 @@
 # cat /etc/apt/sources.list
 #
 
-deb http://rep.õõõõõõ.õõ/ubuntu xenial main restricted universe
-deb http://rep.õõõõõõ.õõ/ubuntu xenial-updates main restricted universe
-deb http://rep.õõõõõõ.õõ/ubuntu xenial-security main restricted universe
+deb http://rep.xxxxxx/ubuntu xenial main restricted universe
+deb http://rep.xxxxxx/ubuntu xenial-updates main restricted universe
+deb http://rep.xxxxxx/ubuntu xenial-security main restricted universe
